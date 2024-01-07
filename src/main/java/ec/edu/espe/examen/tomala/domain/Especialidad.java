@@ -11,7 +11,7 @@ import jakarta.persistence.Version;
 @Getter
 @Setter
 @Entity
-@Table(name = "especialidad")
+@Table(name = "ESPECIALIDAD")
 public class Especialidad {
 
     @Id

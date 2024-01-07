@@ -28,13 +28,10 @@ public class DocenteService {
     @Transactional
     public Docente create(Docente docente) {
         try {
-            System.out.println("Holaaaaaaaaaaaaaaaa"+docente.toString());
 
             if (especialidadRepository.findById(docente.getCodEspecialidad()) != null) {
-                System.out.println("Hola, valida que la especialidad exista");
                 Date fechaActual = new Date();
                 if (docente.getFechaIngreso().after(fechaActual)) {
-                    System.out.println("Hola, a punto de guardar");
                     return this.docenteRepository.save(docente);
 
                 } else {
